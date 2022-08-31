@@ -1,0 +1,23 @@
+body {
+  background-color: whitesmoke;
+}
+
+body .article_product {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: 1px solid black;
+  background-color: white;
+  padding: 1rem;
+}
+
+body .article_product img {
+  width: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+body .article_product h4 {
+  text-align: center;
+}
+/*# sourceMappingURL=style.css.map */

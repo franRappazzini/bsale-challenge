@@ -1,0 +1,25 @@
+body {
+  background-color: whitesmoke;
+
+  .article_product {
+    width: fit-content;
+    border: 1px solid black;
+    background-color: white;
+    padding: 1rem;
+
+    img {
+      width: 250px;
+      object-fit: cover;
+    }
+
+    h4 {
+      text-align: center;
+    }
+
+    // div {
+    //   display: flex;
+    //   flex-direction: column;
+    //   align-items: center;
+    // }
+  }
+}
