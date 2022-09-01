@@ -4,6 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://dojiw2m9tvv09.cloudfront.net/4/8/favicon_bsale2344.jpeg?2887"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="https://dojiw2m9tvv09.cloudfront.net/4/8/favicon_bsale2344.jpeg?2887"
+    />
     <title>BSALE</title>
 
     <!-- bootstrap -->
@@ -32,35 +40,45 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div
-            class="collapse navbar-collapse navbar-nav me-auto mb-2 mb-lg-0"
+            class="collapse navbar-collapse justify-content-between"
             id="navbarSupportedContent"
           >
-            <select class="form-select">
-              <option selected>Categorias</option>
-            </select>
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Categorias
-                </a>
-                <ul class="dropdown-menu"></ul>
-              </li>
-            </ul>
+            <div class="my-2 d-flex">
+              <select class="form-select-sm select_category d-flex me-2">
+                <option selected>Categorias</option>
+              </select>
+              <select class="form-select-sm select_order d-flex">
+                <option selected>Orden</option>
+                <option value="name-ASC">A-Z</option>
+                <option value="name-DESC">Z-A</option>
+                <option value="price-ASC">$ Menor-Mayor</option>
+                <option value="price-DESC">$ Mayor-Menor</option>
+              </select>
+            </div>
+
             <form class="d-flex form_search" role="search">
               <input
                 class="form-control me-2 input_form"
                 type="search"
-                placeholder="Search"
+                placeholder="Buscar producto"
                 aria-label="Search"
               />
-              <button class="btn btn-outline-success" type="submit">
-                Search
+              <button
+                class="btn btn-outline-success d-flex align-items-center"
+                type="submit"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-search"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+                  />
+                </svg>
               </button>
             </form>
           </div>
@@ -69,10 +87,24 @@
     </header>
 
     <main>
+      <section class="spiner_container"></section>
       <section class="products_container d-flex flex-wrap"></section>
+      <section
+        class="pagination_container d-flex justify-content-center mt-3"
+      ></section>
     </main>
 
-    <footer></footer>
+    <footer>
+      <p class="text-center m-0">
+        Challenge de BSALE creado por
+        <a
+          href="https://rappazzini-portfolio.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Francisco Rappazzini</a
+        >.
+      </p>
+    </footer>
 
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <script

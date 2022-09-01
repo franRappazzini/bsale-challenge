@@ -12,6 +12,11 @@ body {
     margin: 0 auto;
     padding: 2rem;
 
+    .spiner_container {
+      display: flex;
+      justify-content: center;
+    }
+
     .products_container {
       justify-content: space-between;
 
@@ -22,6 +27,10 @@ body {
         }
       }
     }
+  }
+
+  footer {
+    padding: 3rem 0;
   }
 
   @media only screen and (max-width: 576px) {
