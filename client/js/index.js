@@ -1,3 +1,4 @@
+require("dotenv").config();
 const { default: axios } = require("axios");
 
 $(() => {
@@ -6,7 +7,7 @@ $(() => {
   handlers();
 });
 
-const URL = "http://localhost:3001";
+axios.defaults.baseURL = process.env.URL_SERVER || "http://localhost:3001";
 // para paginado
 let page = 1;
 const prodPerPage = 12;
@@ -30,7 +31,7 @@ async function getProducts(name, cat, order) {
   else if (cat) query = `?category=${cat}`;
   else if (order) query = `?order=${order}`;
 
-  const res = await axios.get(URL + "/product" + query);
+  const res = await axios.get(`/product${query}`);
   // manejo de errores
   if (res.response) {
     $(".products_container, .spiner_container, .pagination_container").empty();
@@ -98,7 +99,7 @@ async function getProducts(name, cat, order) {
 }
 
 async function getCategories() {
-  const res = await axios.get(URL + "/category");
+  const res = await axios.get("/category");
 
   if (res.response) return console.log(res.response.data);
 
