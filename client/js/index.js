@@ -1,4 +1,3 @@
-require("dotenv").config();
 const { default: axios } = require("axios");
 
 $(() => {
@@ -7,7 +6,8 @@ $(() => {
   handlers();
 });
 
-axios.defaults.baseURL = process.env.URL_SERVER || "http://localhost:3001";
+axios.defaults.baseURL =
+  "https://challenge--bsale.herokuapp.com" || "http://localhost:3001";
 // para paginado
 let page = 1;
 const prodPerPage = 12;
@@ -172,6 +172,7 @@ function appendPagination(totalPage) {
 }
 
 function filterProducts() {
+  page = 1;
   // obtengo los valores para hacer el get
   const inputValue = $(".input_form").val().toUpperCase();
   const selectValue = $(".select_category option").filter(":selected").val();

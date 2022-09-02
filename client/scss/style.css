@@ -2,6 +2,10 @@ body {
   background-color: whitesmoke;
 }
 
+body header {
+  margin-bottom: 2rem;
+}
+
 body header .item_category {
   cursor: pointer;
 }
@@ -26,7 +30,6 @@ body main .products_container {
   -ms-grid-columns: (1fr)[4];
       grid-template-columns: repeat(4, 1fr);
   grid-gap: 1rem;
-  margin-top: 2rem;
 }
 
 body main .products_container article {

@@ -2,6 +2,8 @@ body {
   background-color: whitesmoke;
 
   header {
+    margin-bottom: 2rem;
+
     .item_category {
       cursor: pointer;
     }
@@ -20,7 +22,6 @@ body {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       grid-gap: 1rem;
-      margin-top: 2rem;
 
       article {
         justify-self: center;
