@@ -9,5 +9,5 @@ server.use(express.json());
 server.use("/product", product);
 server.use("/category", category);
 
-const PORT = 3001;
-server.listen(PORT, () => console.log("Server listening on port:", PORT));
+const port = process.env.PORT || 3001;
+server.listen(port, () => console.log("Server listening on port:", port));
