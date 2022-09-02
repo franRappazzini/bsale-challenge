@@ -1,4 +1,5 @@
 # Bsale challenge - Software Developer
+### Ejercicio
 Construir una tienda online que despliegue productos agrupados por la categoría a la que pertenecen, generando por separado backend (API REST) y frontend (aplicación que la consuma) y utilizando la base de datos que se disponibiliza para
 su desarrollo.<br/>
 Además, hay que agregar un buscador, el cual tiene que estar implementado a nivel de servidor, 
