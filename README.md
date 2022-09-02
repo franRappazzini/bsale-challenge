@@ -11,7 +11,10 @@ La aplicación de cliente tiene que estar desarrollada con vanilla javascript
 específicos, tales como; boopstrap, material, Jquery, entre otros.<br/><br/>
 Finalmente, disponibilizar la aplicación y el repositorio con el código en un hosting
 como a modo de ejemplo, puede ser; Heroku, Netlity u otro. También puedes levantar
-el sitio en una cuenta AWS.
+el sitio en una cuenta AWS. <br/><br/>
+
+[Deploy Front en Netlify](https://bsale-challenge.netlify.app/)
+[Deploy Back en Heroku](https://challenge--bsale.herokuapp.com)
 
 ## 🛠️ Dependencias Utilizadas en Front
 * Axios
