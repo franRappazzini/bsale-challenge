@@ -13,7 +13,7 @@ Finalmente, disponibilizar la aplicación y el repositorio con el código en un 
 como a modo de ejemplo, puede ser; Heroku, Netlity u otro. También puedes levantar
 el sitio en una cuenta AWS. <br/><br/>
 
-[Deploy Front en Netlify](https://bsale-challenge.netlify.app/)
+[Deploy Front en Netlify](https://bsale-challenge.netlify.app/)<br/>
 [Deploy Back en Heroku](https://challenge--bsale.herokuapp.com)
 
 ## 🛠️ Dependencias Utilizadas en Front
