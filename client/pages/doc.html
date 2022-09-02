@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://dojiw2m9tvv09.cloudfront.net/4/8/favicon_bsale2344.jpeg?2887"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="https://dojiw2m9tvv09.cloudfront.net/4/8/favicon_bsale2344.jpeg?2887"
+    />
+    <title>API</title>
+
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <header></header>
+
+    <main class="container">
+      <section class="doc_container">
+        <div>
+          <h3>GET lista de productos</h3>
+          <ul>
+            <li>
+              <span class="span_code">GET /products</span> retornara todos los
+              productos
+            </li>
+          </ul>
+
+          <p>Parametros</p>
+          <ul>
+            <li>
+              <span class="fst-italic">name</span>, retorna productos que en su
+              atributo 'name' contenga lo solicitado.
+            </li>
+            <li>
+              <span class="fst-italic">category</span>, retorna productos donde
+              su atributo 'category' sea igual al solicitado.
+            </li>
+            <li>
+              <span class="fst-italic">order</span>, retorna productos segun el
+              orden solicitado. (name-ASC / name-DESC / price-ASC / name-DESC)
+            </li>
+          </ul>
+
+          <p>Ejemplos</p>
+          <ul>
+            <li><span class="span_code">GET /product?name=mistral</span></li>
+            <li>
+              <span class="span_code"
+                >GET /product?category=ron&order=name-ASC</span
+              >
+            </li>
+            <li>
+              <span class="span_code"
+                >GET /product?name=sprite&category=bebidas
+                energeticas&order=price-DESC</span
+              >
+            </li>
+          </ul>
+
+          <p>Respuesta</p>
+          <pre class="code_container">
+          <code>
+            [
+              {
+                "id":5,
+                "name":"ENERGETICA MR BIG",
+                "url_image":"https://dojiw2m9tvv09.cloudfront.net/11132/product/misterbig3308256.jpg",
+                "price":1490,
+                "discount":20,
+                "category":1
+              },
+              {
+                "id":6,
+                "name":"ENERGETICA RED BULL",
+                "url_image":"https://dojiw2m9tvv09.cloudfront.net/11132/product/redbull8381.jpg",
+                "price":1490,
+                "discount":0,
+                "category":1
+              },
+              {
+                "id":7,
+                "name":"ENERGETICA SCORE",
+                "url_image":
+                "https://dojiw2m9tvv09.cloudfront.net/11132/product/logo7698.png",
+                "price":1290,
+                "discount":0,
+                "category":1
+              },
+              {
+                "id":8,
+                "name":"PISCO ALTO DEL CARMEN 35º",
+                "url_image":"https://dojiw2m9tvv09.cloudfront.net/11132/product/alto8532.jpg",
+                "price":7990,"discount":10,
+                "category":2
+              }
+              ...
+            ]
+          </code>
+        </pre>
+        </div>
+
+        <div class="mt-5">
+          <h3>GET lista de categorias</h3>
+          <ul>
+            <li>
+              <span class="span_code">GET /category</span> retornara todos las
+              categorias
+            </li>
+          </ul>
+
+          <p>Respuesta</p>
+          <pre class="code_container">
+          <code>
+            [
+              {
+                "id":1,
+                "name":"bebida energetica"
+              },
+              {
+                "id":2,
+                "name":"pisco"
+              },
+              {
+                "id":3,
+                "name":"ron"
+              },
+              {
+                "id":4,
+                "name":"bebida"
+              },
+              {
+                "id":5,
+                "name":"snack"
+              },
+              {
+                "id":6,
+                "name":"cerveza"
+              },
+              {
+                "id":7,
+                "name":"vodka"
+              }
+            ]
+          </code>
+        </pre>
+        </div>
+      </section>
+    </main>
+
+    <footer></footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
