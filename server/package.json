@@ -11,7 +11,7 @@
   "scripts": {
     "start": "nodemon server.js"
   },
-  "name": "server",
+  "name": "server-bsale-challenge",
   "version": "1.0.0",
   "main": "server.js",
   "keywords": [],
