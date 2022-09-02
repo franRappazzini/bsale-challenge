@@ -1,5 +1,5 @@
-const { Router, response } = require("express");
-const { pool } = require("../db");
+const { Router } = require("express");
+const pool = require("../db");
 const product = Router();
 
 product.get("", (req, res) => {
@@ -7,27 +7,23 @@ product.get("", (req, res) => {
 
   const orderBy = order?.split("-");
 
-  console.log(orderBy);
-
-  // TODO pasar a switch
-  let query = "";
+  // armo la query de SQL segun las queries pasadas
+  let query = "SELECT * FROM product";
   if (name && category && order) {
-    query = `SELECT * FROM product WHERE name LIKE '%${name}%' AND category=${category} ORDER BY ${orderBy[0]} ${orderBy[1]};`;
+    query += ` WHERE name LIKE '%${name}%' AND category=${category} ORDER BY ${orderBy[0]} ${orderBy[1]};`;
   } else if (name && order) {
-    query = `SELECT * FROM product WHERE name LIKE '%${name}%' ORDER BY ${orderBy[0]} ${orderBy[1]};`;
+    query += ` WHERE name LIKE '%${name}%' ORDER BY ${orderBy[0]} ${orderBy[1]};`;
   } else if (category && order) {
-    query = `SELECT * FROM product WHERE category=${category} ORDER BY ${orderBy[0]} ${orderBy[1]};`;
+    query += ` WHERE category=${category} ORDER BY ${orderBy[0]} ${orderBy[1]};`;
   } else if (name && category) {
-    query = `SELECT * FROM product WHERE name LIKE '%${name}%' AND category=${category};`;
+    query += ` WHERE name LIKE '%${name}%' AND category=${category};`;
   } else if (name) {
-    query = `SELECT * FROM product WHERE name LIKE '%${name}%';`;
+    query += ` WHERE name LIKE '%${name}%';`;
   } else if (category) {
-    query = `SELECT * FROM product WHERE category=${category};`;
+    query += ` WHERE category=${category};`;
   } else if (order) {
-    query = `SELECT * FROM product ORDER BY ${orderBy[0]} ${orderBy[1]};`;
-  } else query = "SELECT * FROM product;";
-
-  console.log(query);
+    query += ` ORDER BY ${orderBy[0]} ${orderBy[1]};`;
+  } else query += ";";
 
   try {
     pool.getConnection((err, conn) => {

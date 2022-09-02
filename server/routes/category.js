@@ -1,5 +1,5 @@
 const { Router } = require("express");
-const { pool } = require("../db");
+const pool = require("../db");
 const category = Router();
 
 category.get("", (req, res) => {
