@@ -113,11 +113,18 @@ async function getCategories() {
 
 function handlers() {
   $(".form_search").submit((e) => {
+    page = 1;
     e.preventDefault();
     filterProducts();
   });
-  $(".select_category").change(() => filterProducts());
-  $(".select_order").change(() => filterProducts());
+  $(".select_category").change(() => {
+    page = 1;
+    filterProducts();
+  });
+  $(".select_order").change(() => {
+    page = 1;
+    filterProducts();
+  });
 }
 
 function appendPagination(totalPage) {
@@ -172,7 +179,6 @@ function appendPagination(totalPage) {
 }
 
 function filterProducts() {
-  page = 1;
   // obtengo los valores para hacer el get
   const inputValue = $(".input_form").val().toUpperCase();
   const selectValue = $(".select_category option").filter(":selected").val();
