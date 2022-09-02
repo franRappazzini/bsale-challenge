@@ -13,13 +13,16 @@ Finalmente, disponibilizar la aplicación y el repositorio con el código en un 
 como a modo de ejemplo, puede ser; Heroku, Netlity u otro. También puedes levantar
 el sitio en una cuenta AWS.
 
-## 🛠️ Dependencias Utilizadas
-
-* 
-* Redux
-* Express js
-* PostrgreSQL
-* Sequelize
+## 🛠️ Dependencias Utilizadas en Front
+* Axios
 * Sass
-* Material UI
-* [API CoinGecko](https://www.coingecko.com/en/api)
+* jQuery
+* Bootstrap
+
+## 🛠️ Dependencias Utilizadas en Back
+
+* Expess js
+* MySQL
+* Nodemon
+* Cors
+* Dotenv
